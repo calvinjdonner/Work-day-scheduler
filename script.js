@@ -1,19 +1,39 @@
 var currentDate = moment().format('MMMM Do YYYY');
 var currentHour = parseInt(moment().format('H'));
-var myFloat = parseInt("10"); //do I need to have a variable to parse every id or just parse it when I call it for comparison? 
 
 console.log(currentDate);
 console.log(currentHour);
-console.log(myFloat);
 
 function displayDate() {
-    $("p #currentDay").text(currentDate);
+    $("#currentDay").text(currentDate);
 }
 
-if(myFloat < currentHour) {
-    $(".future").last().addClass(".past").removeClass(".future");
+// if(myFloat < currentHour) {
+//     $(".future").last().addClass(".past").removeClass(".future");
+// }
+
+function rowUpdater() {
+    $(".rowHour").each(function() {
+        var rowHours = parseInt($(this)[0].id);
+        console.log(rowHours);
+
+        if(rowHours < currentHour) {
+           $(this).addClass("past") 
+        }
+
+        else if(rowHours === currentHour){
+            $(this).removeClass("past").addClass("present")
+        }
+
+        else {
+            $(this).removeClass("present").addClass("future")
+        }
+    })   
 }
 
+rowUpdater();
+
+displayDate();
 //if(hour > currentDate.hour) {
     //$("future present").addClass("past")
     //$("future").removeClass("future present");
