@@ -5,8 +5,8 @@ As an employee with a busy schedule, I want to add important events to a daily p
 
 ## Built With
 * HTML
-* CSS
-* JavaScript
+* CSS (Bootstrap)
+* JavaScript (jQuery)
 
 ## Contributing
 Calvin Donner
