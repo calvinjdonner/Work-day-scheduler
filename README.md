@@ -12,4 +12,5 @@ As an employee with a busy schedule, I want to add important events to a daily p
 Calvin Donner
 
 ## Website
+https://calvinjdonner.github.io/Work-day-scheduler/
 ![deployed website screenshot](images/workday%20scheduler%20screenshot.png)
